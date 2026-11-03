@@ -1,0 +1,19 @@
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: mydb
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: c
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
+    restart: always
+
+  adminer:
+    image: adminer:latest
+    container_name: myadminerKanban
+    ports:
+      - "8000:8080"
+    restart: always
